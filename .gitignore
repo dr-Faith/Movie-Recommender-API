@@ -1,0 +1,7 @@
+imdb_data
+tmdb_data
+latent_matrix_1_df.pkl
+mov_id_map.pkl
+mov_map.pkl
+user_ratings_f1.pkl
+.env

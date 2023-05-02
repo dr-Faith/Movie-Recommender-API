@@ -1,0 +1,7 @@
+numpy
+pandas
+nltk
+wordcloud
+bs4
+sklearn
+sqlite
