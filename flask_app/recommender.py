@@ -21,7 +21,10 @@ class MovieRecommender():
     def recommend_movies(self, movie):
         selected_movie = movie ##############
         close_matches = difflib.get_close_matches(selected_movie, list(self.mov_id_map.keys()))
+        if close_matches == []:
+            return None
         select_movie = close_matches[0]
+        print(select_movie)
         selected_movie_id = self.mov_id_map[select_movie]
         a_1 = np.array(self.content_latent_matrix.loc[selected_movie_id]).reshape(1, -1)
         a_2 = np.array(self.user_latent_matrix.loc[selected_movie_id]).reshape(1, -1)
@@ -37,6 +40,7 @@ class MovieRecommender():
         print(f"***********Recommended Movies for {select_movie.upper()}**********")
         for idx, movie in enumerate(top_similar):
             print(f"{idx+1}. {movie}")
+        return top_similar
     
 if __name__ == '__main__':
     movie_recommender = MovieRecommender('latent_matrix_1_df.pkl', 'user_ratings_f1.pkl', 'mov_map.pkl', 'mov_id_map.pkl')

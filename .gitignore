@@ -5,3 +5,9 @@ mov_id_map.pkl
 mov_map.pkl
 user_ratings_f1.pkl
 .env
+flask_app/__pycache__
+flask_app/Lib
+flask_app/Scripts
+flask_app/include
+flask_app/pyvenv.cfg
+flask_app/Pipfile
