@@ -4,6 +4,4 @@ wtforms
 flask_bootstrap
 numpy
 pandas<2.0.0
-sklearn
-pickle
-difflib
+scikit-learn
