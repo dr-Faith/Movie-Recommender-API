@@ -21,6 +21,7 @@ class MovieRecommender():
     def recommend_movies(self, movie):
         selected_movie = movie ##############
         close_matches = difflib.get_close_matches(selected_movie, list(self.mov_id_map.keys()))
+        print(close_matches)
         if close_matches == []:
             return None
         select_movie = close_matches[0]

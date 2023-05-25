@@ -128,7 +128,7 @@ def add():
             release_date=release_date
         )
 
-    if api_key == env
+
     try:
         db.session.add(new_movie)
         db.session.commit()
